@@ -11,4 +11,8 @@ app.use(express.urlencoded({extended: false}))
 app.use(cors())
 app.use(morgan("dev"))
 
+
+// Routes
+app.use("/api/v1", require("./routes/main.routes"))
+
 module.exports = app;
