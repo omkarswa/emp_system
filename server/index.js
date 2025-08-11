@@ -5,17 +5,12 @@ require("dotenv").config({
 });
 
 const app = require("./src/app");
+const { ConnectDB } = require("./src/config/db.config");
 
-const {ConnectDB} = require("./src/config/db.config");
-ConnectDB()
-
-
+ConnectDB();
 
 const PORT = process.env.PORT || 3000;
 
-
-
-
-app.listen(port, ()=> {
-  console.log(`Server is running on port ${PORT}`);
-})
+app.listen(PORT, () => { // ✅ match case here
+    console.log(`Server is running on port ${PORT}`);
+});
