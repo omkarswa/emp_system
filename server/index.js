@@ -7,10 +7,10 @@ require("dotenv").config({
 const app = require("./src/app");
 const { ConnectDB } = require("./src/config/db.config");
 
+// Connect to MongoDB
 ConnectDB();
 
 const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => { // ✅ match case here
+app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

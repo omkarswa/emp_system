@@ -1,10 +1,8 @@
-const express = require('express');
-const {registerUser} = require('../controllers/main.controller');
+const express = require("express");
 const router = express.Router();
 
-router.route('/register')
-.post(registerUser);
-
-
+// Employees API
+router.use("/employees", require("./employee.routes"));
+router.use("/test", require("./test.routes"));
 
 module.exports = router;
