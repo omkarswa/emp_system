@@ -1,18 +1,22 @@
-const express = require("express")
-const app = express()
-const cors = require("cors")
-const mongoose = require("mongoose")
-const morgan = require("morgan")
+// app.js
+const express = require("express");
+const cors = require("cors");
+const TestData = require("./models/TestData");
 
+const app = express();
+app.use(cors());
+app.use(express.json());
 
-// Middleware
-app.use(express.json({limit: "10mb"}))
-app.use(express.urlencoded({extended: false}))
-app.use(cors())
-app.use(morgan("dev"))
+// routes
+app.get("/api/v1/test", async (req, res) => {
+    res.json({ message: "Backend is running!" });
+});
 
+app.post("/api/v1/save-test", async (req, res) => {
+    const { message, show } = req.body;
+    const testData = new TestData({ message, show });
+    await testData.save();
+    res.json({ success: true, message: "Data saved!" });
+});
 
-// Routes
-app.use("/api/v1", require("./routes/main.routes"))
-
-module.exports = app;
+module.exports = app;  // ✅ export app without listen

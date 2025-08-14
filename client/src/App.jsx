@@ -1,16 +1,14 @@
-import { useState } from 'react'
-
-import './App.css'
+import TestConnection from "./TestConnection";
 
 function App() {
-
   return (
-  <>
-  <h1 className='text-5xl bg-pink-200 text-red-500'>
-    welcome to Onboard!
-  </h1>
-  </>
-  )
+    <>
+      <h1 className=''>
+        welcome to Onboard!
+      </h1>
+      <TestConnection />
+    </>
+  );
 }
 
-export default App
+export default App;
