@@ -1,7 +1,7 @@
 // app.js
 const express = require("express");
 const cors = require("cors");
-const TestData = require("./models/TestData");
+const TestData = require("./src/models/TestData");
 
 const app = express();
 app.use(cors());

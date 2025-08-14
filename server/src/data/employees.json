@@ -1,0 +1,40 @@
+[
+    {
+        "firstName": "Amit",
+        "lastName": "Sharma",
+        "email": "amit.sharma@example.com",
+        "phone": "9876543210",
+        "department": "IT",
+        "role": "Developer",
+        "dateOfJoining": "2025-08-14",
+        "status": "Active",
+        "address": {
+            "street": "123 Main Street",
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "postalCode": "400001",
+            "country": "India"
+        },
+        "salary": 75000,
+        "notes": "Excellent performer"
+    },
+    {
+        "firstName": "Priya",
+        "lastName": "Verma",
+        "email": "priya.verma@example.com",
+        "phone": "9876501234",
+        "department": "HR",
+        "role": "HR Manager",
+        "dateOfJoining": "2023-06-01",
+        "status": "Active",
+        "address": {
+            "street": "45 Park Avenue",
+            "city": "Delhi",
+            "state": "Delhi",
+            "postalCode": "110001",
+            "country": "India"
+        },
+        "salary": 85000,
+        "notes": "Strong leadership skills"
+    }
+]

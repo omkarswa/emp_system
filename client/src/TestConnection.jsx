@@ -24,8 +24,7 @@ function TestConnection() {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 message: "Hello from frontend!",
-                show:"hello from gintama"
-               
+                show:"gintama"
             })
 
         })
