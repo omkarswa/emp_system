@@ -11,7 +11,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.error(err));
 
 // read employees.json
-const employees = JSON.parse(fs.readFileSync("src/data/employees.json", "utf-8"));
+const employees = JSON.parse(fs.readFileSync("data/employees.json", "utf-8"));
 
 const importData = async () => {
   try {
