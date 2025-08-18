@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const Employee = require("../models/Employee");
-const employees = require("./employees.json"); // 👈 put your JSON in employees.json file
+const employees = require("./src/data/employees.json"); // 👈 put your JSON in employees.json file
 
 dotenv.config();
 

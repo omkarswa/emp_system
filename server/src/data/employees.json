@@ -1,59 +1,202 @@
 [
-    {
-        "firstName": "Amit",
-        "lastName": "Sharma",
-        "email": "amit.sharma@example.com",
-        "phone": "9876543210",
-        "department": "IT",
-        "role": "Developer",
-        "dateOfJoining": "2025-08-14",
-        "status": "Active",
-        "address": {
-            "street": "123 Main Street",
-            "city": "Mumbai",
-            "state": "Maharashtra",
-            "postalCode": "400001",
-            "country": "India"
-        },
-        "salary": 75000,
-        "notes": "Excellent performer"
+  {
+    "_id": 1,
+    "firstName": "Giyu",
+    "lastName": "Tomio",
+    "email": "giyu.tomio@example.com",
+    "phone": "9001002000",
+    "department": "Water Division",
+    "role": "Water Hashira",
+    "dateOfJoining": "2024-05-10",
+    "status": "Active",
+    "address": {
+      "street": "12 Sakura Lane",
+      "city": "Tokyo",
+      "state": "Tokyo",
+      "postalCode": "100001",
+      "country": "Japan"
     },
-    {
-        "firstName": "Priya",
-        "lastName": "Verma",
-        "email": "priya.verma@example.com",
-        "phone": "9876501234",
-        "department": "HR",
-        "role": "HR Manager",
-        "dateOfJoining": "2023-06-01",
-        "status": "Active",
-        "address": {
-            "street": "45 Park Avenue",
-            "city": "Delhi",
-            "state": "Delhi",
-            "postalCode": "110001",
-            "country": "India"
-        },
-        "salary": 85000,
-        "notes": "Strong leadership skills"
+    "salary": 95000,
+    "notes": "Calm and disciplined"
+  },
+  {
+    "_id": 2,
+    "firstName": "Kyojuro",
+    "lastName": "Rengoku",
+    "email": "kyojuro.rengoku@example.com",
+    "phone": "9001002001",
+    "department": "Flame Division",
+    "role": "Flame Hashira",
+    "dateOfJoining": "2023-08-21",
+    "status": "Active",
+    "address": {
+      "street": "34 Hinoki Street",
+      "city": "Kyoto",
+      "state": "Kyoto",
+      "postalCode": "600001",
+      "country": "Japan"
     },
-    {
-        "firstName": "nirvikar",
-        "lastName": "Sharma",
-        "email": "nirvikar.sharma@example.com",
-        "phone": "9976543210",
-        "department": "IT",
-        "role": "Developer",
-        "dateOfJoining": "2025-08-14",
-        "status": "Active",
-        "address": {
-            "street": "123231 Main Street",
-            "city": "Mumbai",
-            "state": "Maharashtra",
-            "postalCode": "400001",
-            "country": "India"
-        },
-        "salary": 7500,
-        "notes": "Excellent performer"
-    }
+    "salary": 97000,
+    "notes": "Passionate and strong-willed"
+  },
+  {
+    "_id": 3,
+    "firstName": "Shinobu",
+    "lastName": "Kocho",
+    "email": "shinobu.kocho@example.com",
+    "phone": "9001002002",
+    "department": "Insect Division",
+    "role": "Insect Hashira",
+    "dateOfJoining": "2023-11-15",
+    "status": "Active",
+    "address": {
+      "street": "56 Wisteria Road",
+      "city": "Osaka",
+      "state": "Osaka",
+      "postalCode": "530001",
+      "country": "Japan"
+    },
+    "salary": 93000,
+    "notes": "Gentle but deadly"
+  },
+  {
+    "_id": 4,
+    "firstName": "Tengen",
+    "lastName": "Uzui",
+    "email": "tengen.uzui@example.com",
+    "phone": "9001002003",
+    "department": "Sound Division",
+    "role": "Sound Hashira",
+    "dateOfJoining": "2022-12-01",
+    "status": "Active",
+    "address": {
+      "street": "78 Echo Avenue",
+      "city": "Osaka",
+      "state": "Osaka",
+      "postalCode": "530002",
+      "country": "Japan"
+    },
+    "salary": 96000,
+    "notes": "Flashy and flamboyant"
+  },
+  {
+    "_id": 5,
+    "firstName": "Mitsuri",
+    "lastName": "Kanroji",
+    "email": "mitsuri.kanroji@example.com",
+    "phone": "9001002004",
+    "department": "Love Division",
+    "role": "Love Hashira",
+    "dateOfJoining": "2024-03-18",
+    "status": "Active",
+    "address": {
+      "street": "90 Cherry Blossom Street",
+      "city": "Kyoto",
+      "state": "Kyoto",
+      "postalCode": "600002",
+      "country": "Japan"
+    },
+    "salary": 94000,
+    "notes": "Energetic and kind-hearted"
+  },
+  {
+    "_id": 6,
+    "firstName": "Sanemi",
+    "lastName": "Shinazugawa",
+    "email": "sanemi.shinazugawa@example.com",
+    "phone": "9001002005",
+    "department": "Wind Division",
+    "role": "Wind Hashira",
+    "dateOfJoining": "2023-01-12",
+    "status": "Active",
+    "address": {
+      "street": "15 Bamboo Street",
+      "city": "Fukuoka",
+      "state": "Fukuoka",
+      "postalCode": "810001",
+      "country": "Japan"
+    },
+    "salary": 92000,
+    "notes": "Hot-tempered but loyal"
+  },
+  {
+    "_id": 7,
+    "firstName": "Gyomei",
+    "lastName": "Himejima",
+    "email": "gyomei.himejima@example.com",
+    "phone": "9001002006",
+    "department": "Stone Division",
+    "role": "Stone Hashira",
+    "dateOfJoining": "2022-07-20",
+    "status": "Active",
+    "address": {
+      "street": "22 Mountain Road",
+      "city": "Nagano",
+      "state": "Nagano",
+      "postalCode": "380001",
+      "country": "Japan"
+    },
+    "salary": 98000,
+    "notes": "Strongest and compassionate"
+  },
+  {
+    "_id": 8,
+    "firstName": "Obanai",
+    "lastName": "Iguro",
+    "email": "obanai.iguro@example.com",
+    "phone": "9001002007",
+    "department": "Serpent Division",
+    "role": "Serpent Hashira",
+    "dateOfJoining": "2023-09-05",
+    "status": "Active",
+    "address": {
+      "street": "40 Snake Alley",
+      "city": "Tokyo",
+      "state": "Tokyo",
+      "postalCode": "100002",
+      "country": "Japan"
+    },
+    "salary": 91000,
+    "notes": "Strict and disciplined"
+  },
+  {
+    "_id": 9,
+    "firstName": "Muichiro",
+    "lastName": "Tokito",
+    "email": "muichiro.tokito@example.com",
+    "phone": "9001002008",
+    "department": "Mist Division",
+    "role": "Mist Hashira",
+    "dateOfJoining": "2024-01-25",
+    "status": "Active",
+    "address": {
+      "street": "5 Foggy Lane",
+      "city": "Sapporo",
+      "state": "Hokkaido",
+      "postalCode": "060001",
+      "country": "Japan"
+    },
+    "salary": 90000,
+    "notes": "Calm and focused"
+  },
+  {
+    "_id": 10,
+    "firstName": "Kanao",
+    "lastName": "Tsuyuri",
+    "email": "kanao.tsuyuri@example.com",
+    "phone": "9001002009",
+    "department": "Flower Division",
+    "role": "Flower Hashira",
+    "dateOfJoining": "2023-06-30",
+    "status": "Active",
+    "address": {
+      "street": "33 Petal Street",
+      "city": "Tokyo",
+      "state": "Tokyo",
+      "postalCode": "100003",
+      "country": "Japan"
+    },
+    "salary": 91500,
+    "notes": "Quiet but powerful"
+  }
 ]
