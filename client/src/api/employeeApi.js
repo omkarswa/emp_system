@@ -1,9 +1,33 @@
-import axios from "axios";
+const API_URL = "http://localhost:5000/api/employees"; 
 
-const API = axios.create({ baseURL: "http://localhost:5000/api" });
+// Fetch all employees
+export async function getEmployees() {
+  const res = await fetch(API_URL);
+  return res.json();
+}
 
-// CRUD functions
-export const getEmployees = () => API.get("/employees");
-export const addEmployee = (data) => API.post("/employees", data);
-export const updateEmployee = (id, data) => API.put(`/employees/${id}`, data);
-export const deleteEmployee = (id) => API.delete(`/employees/${id}`);
+// Add new employee
+export async function addEmployee(employee) {
+  const res = await fetch(API_URL, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(employee),
+  });
+  return res.json();
+}
+
+// Update employee
+export async function updateEmployee(id, employee) {
+  const res = await fetch(`${API_URL}/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(employee),
+  });
+  return res.json();
+}
+
+// Delete employee
+export async function deleteEmployee(id) {
+  const res = await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+  return res.json();
+}
