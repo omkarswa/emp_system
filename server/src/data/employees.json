@@ -36,5 +36,24 @@
         },
         "salary": 85000,
         "notes": "Strong leadership skills"
+    },
+    {
+        "firstName": "nirvikar",
+        "lastName": "Sharma",
+        "email": "nirvikar.sharma@example.com",
+        "phone": "9976543210",
+        "department": "IT",
+        "role": "Developer",
+        "dateOfJoining": "2025-08-14",
+        "status": "Active",
+        "address": {
+            "street": "123231 Main Street",
+            "city": "Mumbai",
+            "state": "Maharashtra",
+            "postalCode": "400001",
+            "country": "India"
+        },
+        "salary": 7500,
+        "notes": "Excellent performer"
     }
 ]
