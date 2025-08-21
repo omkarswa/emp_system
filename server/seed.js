@@ -8,7 +8,7 @@ const fs = require("fs");
 dotenv.config();
 
 // Import Employee model
-const Employee = require("../models/Employee");
+const Employee = require("./models/Employee");
 
 // Load employees.json dynamically
 const employeesPath = path.join(__dirname, "data", "employees.json");
@@ -16,10 +16,7 @@ const employees = JSON.parse(fs.readFileSync(employeesPath, "utf-8"));
 
 const seedEmployees = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(process.env.MONGO_URI); // ✅ no need for old options
 
     console.log("✅ MongoDB connected...");
 
