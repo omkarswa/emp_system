@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 exports.ConnectDB = async () => {
     if (!process.env.MONGO_URI) {
@@ -7,10 +7,14 @@ exports.ConnectDB = async () => {
     }
 
     try {
-        await mongoose.connect(process.env.MONGO_URI);
-        console.log(`✅ DB connected: ${mongoose.connection.host}`);
+        const conn = await mongoose.connect(process.env.MONGO_URI, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+
+        console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
     } catch (error) {
-        console.error("❌ DB connection failed:", error.message);
+        console.error(`❌ MongoDB Connection Failed: ${error.message}`);
         process.exit(1);
     }
 };

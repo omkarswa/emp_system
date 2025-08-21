@@ -1,16 +1,41 @@
+// seed.js
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const Employee = require("../models/Employee");
-const employees = require("./src/data/employees.json"); // 👈 put your JSON in employees.json file
+const path = require("path");
+const fs = require("fs");
 
+// Load env variables
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URI)
-  .then(async () => {
-    console.log("✅ MongoDB connected, seeding data...");
-    await Employee.deleteMany(); // clear old data
+// Import Employee model
+const Employee = require("../models/Employee");
+
+// Load employees.json dynamically
+const employeesPath = path.join(__dirname, "data", "employees.json");
+const employees = JSON.parse(fs.readFileSync(employeesPath, "utf-8"));
+
+const seedEmployees = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+
+    console.log("✅ MongoDB connected...");
+
+    // Clear existing data
+    await Employee.deleteMany();
+    console.log("🗑 Old employees removed");
+
+    // Insert new data
     await Employee.insertMany(employees);
     console.log("✅ Employees seeded successfully!");
-    process.exit();
-  })
-  .catch(err => console.error("❌ MongoDB error:", err));
+
+    process.exit(0);
+  } catch (error) {
+    console.error("❌ Error seeding employees:", error);
+    process.exit(1);
+  }
+};
+
+seedEmployees();

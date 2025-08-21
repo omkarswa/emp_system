@@ -2,15 +2,30 @@ const express = require("express");
 const mongoose = require("mongoose");
 const router = express.Router();
 
-// ✅ Test backend + MongoDB connection (without TestData)
+// ✅ Health Check Route
 router.get("/test", (req, res) => {
-    const mongoStatus = mongoose.connection.readyState === 1
-        ? "✅ MongoDB connected"
-        : "❌ MongoDB not connected";
+    let mongoStatus = "❌ MongoDB not connected";
+
+    // 0 = disconnected, 1 = connected, 2 = connecting, 3 = disconnecting
+    switch (mongoose.connection.readyState) {
+        case 0:
+            mongoStatus = "❌ MongoDB disconnected";
+            break;
+        case 1:
+            mongoStatus = "✅ MongoDB connected";
+            break;
+        case 2:
+            mongoStatus = "🔄 MongoDB connecting...";
+            break;
+        case 3:
+            mongoStatus = "⚠️ MongoDB disconnecting...";
+            break;
+    }
 
     res.json({
-        message: "✅ Backend is connected to frontend!",
-        mongo: mongoStatus
+        message: "✅ Backend is running",
+        mongo: mongoStatus,
+        timestamp: new Date().toISOString()
     });
 });
 
