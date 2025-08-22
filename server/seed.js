@@ -8,11 +8,13 @@ const fs = require("fs");
 dotenv.config();
 
 // Import Employee model
-const Employee = require("./models/Employee");
+const Employee = require("../server/src/models/Employee");
 
 // Load employees.json dynamically
-const employeesPath = path.join(__dirname, "data", "employees.json");
+const employeesPath = path.join(__dirname, "src", "data", "employees.json");
+console.log("Loading employees from:", employeesPath);
 const employees = JSON.parse(fs.readFileSync(employeesPath, "utf-8"));
+
 
 const seedEmployees = async () => {
   try {
