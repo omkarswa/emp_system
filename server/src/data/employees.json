@@ -1,12 +1,12 @@
 [
   {
     "_id": 1,
-    "name": "Giyu Tomio",
+    "name": "Giyu Tomioo",
     "email": "giyu.tomio@example.com",
     "phone": "9001002000",
-    "department": "Water Division",
+    "department": "Water Department",
     "role": "Water Hashira",
-    "status": "Active"
+    "status": "On Leave"
   },
   {
     "_id": 2,
